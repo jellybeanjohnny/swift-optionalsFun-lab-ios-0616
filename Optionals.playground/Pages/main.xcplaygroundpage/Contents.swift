@@ -32,7 +32,7 @@ var petName: String?
 /*: question3
  ### 3. Currently, what is the _value_ of `petName`?
  */
-
+// nil
 
 
 
@@ -44,8 +44,8 @@ var petName: String?
  */
 // write your code here
 
-
-
+petName = "Moose"
+// still string optional
 
 
 
@@ -54,6 +54,7 @@ var petName: String?
  ### 5. Print out `petName` using Swift's `print()` function. What do you expect to see in the console?
  */
 // write your code here
+print(petName)
 
 
 
@@ -66,7 +67,12 @@ var petName: String?
  */
 // write your code here
 
-
+if let realPetName = petName {
+	print(realPetName)
+}
+else {
+	print("No pet name")
+}
 
 
 
@@ -76,7 +82,9 @@ var petName: String?
  ### 7. Use _optional binding_ to unwrap the value of `petName` and print it to the console without all the **Optional(...)** stuff around it.
  */
 // write your code here
-
+if let realPetName = petName {
+	print(realPetName)
+}
 
 
 
@@ -89,6 +97,10 @@ var petName: String?
 var anotherPetName: String?
 // write your code here
 
+if anotherPetName == nil {
+	print("the value of anotherPetName is nil")
+}
+
 
 
 
@@ -99,7 +111,12 @@ var anotherPetName: String?
  ### 9. Using optional binding, write an if statement that prints "anotherPetName has no value" if it is `nil`; otherwise, print the _unwrapped_ value of `anotherPetName`. What do you expect to see in the console?
  */
 // write your code here
-
+if let thisIsAPet = anotherPetName {
+	print(thisIsAPet)
+}
+else {
+	print("anotherPetName has no value")
+}
 
 
 
@@ -112,7 +129,8 @@ var anotherPetName: String?
  ### 10. Declare a _constant_ optional string (using the `let` keyword). Then try to assign a string value to it on the next line. Print out the constant. What happens?
  */
 // write your code here
-
+let moose: String?
+moose = "Moose"
 
 
 
@@ -127,7 +145,8 @@ var anotherPetName: String?
 // write your code here
 
 
-
+let dog: String? = nil
+dog = "dog"
 
 
 
